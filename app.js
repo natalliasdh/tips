@@ -12,7 +12,7 @@ let tipTotalNum;
 let oldValue = "5";
 
 function calculate() {
-    if (isNaN(billAmountNum) || (isNaN(numberPeopleNum))) {
+    if ((isNaN(billAmountNum)) || (isNaN(numberPeopleNum))) {
         tipPerPersonNum = 0;
         tipTotalNum = 0;
     } else {
@@ -31,7 +31,8 @@ billAmount.addEventListener("input", () => {
 
     if (isNaN(billAmountNum)) {
         document.querySelector(".warning").textContent = "Not a valid bill amount!";
-        return false;
+        calculate();
+
     } else {
         document.querySelector(".warning").textContent = "";
         calculate();
@@ -55,6 +56,7 @@ percentAmount.addEventListener('click', (e) => {
 
 percentAmount.addEventListener('input', (e) => {
     if (e.target.tagName === "INPUT") {
+
         percentAmountNum = parseFloat(e.target.value);
 
         calculate();
@@ -68,6 +70,7 @@ numberPeople.addEventListener("input", (e) => {
 
     if (isNaN(numberPeopleNum)) {
         document.querySelector(".warningTwo").textContent = "Not a valid value";
+        calculate();
 
     } else {
         document.querySelector(".warningTwo").textContent = '';
@@ -82,6 +85,9 @@ reset.addEventListener("click", () => {
     document.querySelector(`button[data-attr="${oldValue}"]`).className = "choose";
     document.querySelector("#chooseinput").value = '';
     numberPeople.value = '';
+    billAmountNum = 0;
+    percentAmountNum = 0;
+    numberPeopleNum = 1;
     tipPerPerson.textContent = "0.00";
     tipTotal.textContent = "0.00";
 
