@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+    <div id="content">
+        <header><img src="assets/images/logo.svg" alt="Tips Calculator"></header>
+        <section id="initialdata">
+            <div class="bill">
+
+                <h1>Bill</h1>
+                <input type="text" id="billamount" name="billamount" placeholder='0'>
+            </div>
+
+            <div class="tipsamount">
+                <h1>Select Tip %</h1>
+                <div id="percent">
+                    <button class="choose">5%</button>
+                    <button class="choose">10%</button>
+                    <button class="choose">15%</button>
+                    <button class="choose">25%</button>
+                    <button class="choose">50%</button>
+                    <input type="text" class="chooseinput" id="chooseinput" placeholder='custom'>
+                </div>
+            </div>
+
+            <div class="numberofpeople">
+                <h1>Number of People</h1>
+                <input type="text" class="people" id="people" placeholder='0'>
+            </div>
+
+        </section>
+
+        <section id="result">
+            <div class="perperson">
+                <h2> Tip Amount<br>/ person</h2>
+                <p id="tipperperson"></p>
+            </div>
+            <div class="total">
+                <h2> Total<br> / person</h2>
+                <p id="tiptotal"></p>
+            </div>
+            <button id="reset">Reset</button>
+        </section>
+
+    </div>
+    <footer>
+
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by Natallia Harmon.
+    </footer>
+
+
+</body>
+
+</html>
