@@ -90,5 +90,7 @@ reset.addEventListener("click", () => {
     numberPeopleNum = 1;
     tipPerPerson.textContent = "0.00";
     tipTotal.textContent = "0.00";
+    document.querySelector(".warningTwo").textContent = '';
+    document.querySelector(".warning").textContent = '';
 
 });
