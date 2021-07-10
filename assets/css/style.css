@@ -202,6 +202,10 @@ footer a {
 }
 
 @media only screen and (min-width:920px) {
+    header {
+        padding-top: 163px;
+        padding-bottom: 81px;
+    }
     .main {
         padding: 45px;
         display: flex;
