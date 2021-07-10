@@ -72,8 +72,8 @@ input#billamount {
     background-image: url("../images/icon-dollar.svg");
 }
 
-input#billamount::placeholder {
-    color: #00474B;
+input::placeholder {
+    color: rgba(0, 71, 75, 0.31)
 }
 
 input:focus {
@@ -91,7 +91,8 @@ input:focus {
     justify-content: space-between;
 }
 
-.choose {
+.choose,
+button.checked {
     flex-basis: 48%;
     width: 100%;
     box-sizing: border-box;
@@ -111,11 +112,20 @@ input.choose {
     text-align: center;
 }
 
+input.choose {
+    color: #00474B;
+}
+
+input.choose:focus {
+    outline-color: #26C2AE;
+}
+
 button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover,
+button.checked {
     background-color: #26C2AE;
     color: #00474B;
 }
@@ -204,7 +214,8 @@ footer a {
     #result {
         flex-basis: 48%;
     }
-    .choose {
+    .choose,
+    button.checked {
         flex-basis: 30%;
     }
     .tipsamount,
@@ -237,4 +248,12 @@ footer a {
         text-decoration: none;
         color: #26C2AE;
     }
+}
+
+.warning,
+.warningTwo {
+    color: red;
+    font-size: 12px;
+    padding-top: 5px;
+    font-weight: 700;
 }
